@@ -10,6 +10,7 @@ app.use(bodyparser.urlencoded({
 }));
 
 app.use(bodyparser.json());
+var port = process.env.PORT || 8084
 
 app.set("view engine","ejs");
 
@@ -78,7 +79,7 @@ app.get('/convertor',function(req,res){
 	res.sendFile(__dirname + "/index.html");
 });*/
 
-app.listen(8084,function(){
+app.listen(port,function(){
 	console.log("server is running");
 });
 
